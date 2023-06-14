@@ -13,7 +13,7 @@
 
 
 
-{{-- <div class="maincore">
+<div class="maincore">
     <div id="jumbotron">
         <p>CURRENT SERIES</p>
     </div>
@@ -29,7 +29,7 @@
             @endforeach
         </div>
     </div>
-</div> --}}
+</div>
 
 
 
