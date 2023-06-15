@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComicController;
+use App\Http\Controllers\PagesController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +16,7 @@ use App\Http\Controllers\ComicController;
 |
 */
 
+Route::get('/', [ PagesController::class, 'getWelcome' ] )->name('Welcome');
 
 //genero tramite controller tutte le rotte per le crud
 Route::resource('comic', ComicController::class);
