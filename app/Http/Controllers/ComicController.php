@@ -19,6 +19,9 @@ class ComicController extends Controller
         return view('pages.home', compact('comics'));
     }
 
+
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -26,8 +29,11 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.create');
     }
+
+
+
 
     /**
      * Store a newly created resource in storage.
@@ -39,6 +45,9 @@ class ComicController extends Controller
     {
         //
     }
+
+
+
 
     /**
      * Display the specified resource.
@@ -56,6 +65,9 @@ class ComicController extends Controller
 
     }
 
+
+
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -66,6 +78,10 @@ class ComicController extends Controller
     {
         //
     }
+
+
+
+
 
     /**
      * Update the specified resource in storage.
@@ -78,6 +94,9 @@ class ComicController extends Controller
     {
         //
     }
+
+
+    
 
     /**
      * Remove the specified resource from storage.

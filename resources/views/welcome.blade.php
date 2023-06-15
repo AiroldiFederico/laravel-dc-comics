@@ -23,6 +23,10 @@
                 </li>
 
                 <li class="">
+                    <a href="{{ route('comic.create') }}">Create</a>
+                </li>
+
+                <li class="">
                     <a href="#">Placeholder</a>
                 </li>
 
