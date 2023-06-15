@@ -1,7 +1,7 @@
 @extends( 'layout.app' )
 
 @section('titlePage')
-    DC Comics | Home
+    DC Comics | SHOW COMIC
 @endsection
 
 @section( 'content' )
@@ -18,17 +18,20 @@
         <p>CURRENT SERIES</p>
     </div>
     <div class="col-10 m-auto">
-        <div id="slide" class="justify-content-center" >
+        <div id="slide" class="justify-content-center col-12" >
 
             {{-- @php
                 dd( $comic );
             @endphp --}}
 
-            <div class="slide2">
+            <div class="slide2 w-25">
                 <img src="{{ $comic->thumb }}" alt="">
                 <h5 class="text-center fw-bolder mb-2">{{ $comic->title }}</h5>
-                <span>{{ $comic->series }}</span>
-                <span>Price: {{ $comic->price }}</span>
+
+                <span class="my-2">{{ $comic->series }}</span>
+                <span class="text-center overflow-y-auto">Description: {{ $comic->description }}</span>
+                <span class="my-2">Date: {{ $comic->sale_date }}</span>
+                <span class="my-2">Price: {{ $comic->price }}</span>
                 <span>Type: {{ $comic->type}}</span>
             </div>
 
