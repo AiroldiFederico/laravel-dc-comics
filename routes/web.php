@@ -16,4 +16,4 @@ use App\Http\Controllers\ComicController;
 
 
 //genero tramite controller tutte le rotte per le crud
-Route::resource('/', ComicController::class);
+Route::resource('comic', ComicController::class);

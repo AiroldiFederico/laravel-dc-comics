@@ -19,12 +19,17 @@
     </div>
     <div class="col-10 m-auto">
         <div id="slide" >
-            @foreach ($comics as $comic)
+            @foreach ($comics as $elem)
             <div class="slide2">
-                <img src="{{ $comic['thumb'] }}" alt="">
-                <span>{{ $comic['series'] }}</span>
-                <span>{{ $comic['price'] }}</span>
-                <span>{{ $comic['type'] }}</span>
+                <img src="{{ $elem['thumb'] }}" alt="">
+
+                <a href="{{ route('comic.show', ['comic' => $elem->id]) }}" class="text-decoration-none">
+                     <h5  class="text-center fw-bolder mb-2 " >{{ $elem['title'] }}</h5>
+                </a>
+
+                <span>{{ $elem['series'] }}</span>
+                <span>Price: {{ $elem['price'] }}</span>
+                <span>Type: {{ $elem['type'] }}</span>
             </div>
             @endforeach
         </div>
