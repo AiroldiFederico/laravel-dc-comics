@@ -36,8 +36,19 @@
                 <span>Price: {{ $elem['price'] }}</span>
                 <span>Type: {{ $elem['type'] }}</span>
 
-                {{-- Edit button --}}
-                <a class="btn btn-warning col-5 mt-2"  href=" {{ route('comic.edit', $elem)}} " role="button">Edit</a>
+                <div class="mt-2 d-flex justify-content-between">
+                    {{-- Edit button --}}
+                    <a class="btn btn-warning col-5"  href=" {{ route('comic.edit', $elem)}} " role="button">Edit</a>
+    
+                    {{-- Delete button --}}
+                    <form action=" {{ route('comic.destroy', $elem ) }} " method="POST" class="col-5"> 
+                        @csrf
+                        @method('DELETE')
+
+                        <button class="btn btn-danger col-12" role="button">Delete</button>
+                    </form>
+                </div>
+
 
             </div>
 

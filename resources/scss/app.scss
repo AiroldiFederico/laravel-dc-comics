@@ -117,6 +117,7 @@ img {
         flex-wrap: wrap;
         justify-content:start;
         color: white;
+        gap: 0.8rem;
     }
 
     // #button {
@@ -133,12 +134,14 @@ img {
 
 
 .slide2 {
-    width: calc(100% / 6);
-    
+    width: calc(96% / 6);
+    background-color: rgba(128, 128, 128, 0.314);
+    border-radius: 10px;
     padding: 1.2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     img {
         width: 100%;
         aspect-ratio: 1;

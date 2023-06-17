@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\Comic;
 use Illuminate\Http\Request;
 
@@ -106,7 +107,10 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+        $form_data = $request->all();
+        $comic->update($form_data);
+
+        return redirect()->route( 'comic.index' );
     }
 
 
@@ -120,6 +124,8 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+
+        return redirect()->route( 'comic.index' );
     }
 }

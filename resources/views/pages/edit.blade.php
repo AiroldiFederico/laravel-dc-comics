@@ -15,9 +15,10 @@
     <div class="col-12 m-auto">
         <div id="slide" class="justify-content-center" >
 
-            <form action=" {{ route( 'comic.store' ) }} " method="POST" class="col-3 vh-100">
+            <form action=" {{ route( 'comic.update', $comic ) }} " method="POST" class="col-3 vh-100">
 
                 @csrf
+                @method('PUT')
 
                 {{-- Titolo --}}
                 <div class="mb-3" class="form-group">
@@ -57,15 +58,15 @@
                 {{-- Date --}}
                 <div class="mb-3" class="form-group">
                   <label for="comic-date" class="form-label">Sale date</label>
-                  <input type="date" name="date" id="comic-date" class="form-control" placeholder="Inserisci la data"
-                  value=" {{ old('date') ?? $comic->date }}">
+                  <input type="date" name="sale_date" id="comic-date" class="form-control" placeholder="Inserisci la data"
+                  value=" {{ old('sale_date') ?? $comic->sale_date }}">
                 </div>
 
                 {{-- Tipo --}}
                 <div class="mb-3" class="form-group">
                   <label for="comic-type" class="form-label">Type</label>
                   <input type="text" name="type" id="comic-type" class="form-control" placeholder="Inserisci il titolo"
-                  value=" {{ old('sale_date') ?? $comic->sale_date }}">
+                  value=" {{ old('type') ?? $comic->type }}">
                 </div>
 
                 <div class="d-flex justify-content-center">
