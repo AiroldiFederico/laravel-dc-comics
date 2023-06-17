@@ -26,24 +26,16 @@
                     <a href="{{ route('comic.create') }}">Create</a>
                 </li>
 
-                <li class="">
-                    <a href="#">Placeholder</a>
-                </li>
-
-                <li class="">
-                    <a href="#">Placeholder</a>
-                </li>
-
         </ul>
     </nav>
 </div>
 
-<div class="jumbotron jumbotron-fluid bg-dark text-white vh-100 pt-4">
+<div class=" bg-dark text-white vh-100 pt-4 d-flex justify-content-center align-items-center">
     <div class="container text-center">
-        <h1 class="display-4">Benvenuto!</h1>
+        <h1 class="">Benvenuto! Guarda tutti i Comics che abbiamo</h1>
     </div>
-    <div class="container text-center">
-        <h1 class="display-4"><a href="{{ route('comic.index') }}" class="font-weight-bold">HOME</a></h1>
+    <div class="container text-start text-decoration-none">
+        <h1 class="display-4"><a href="{{ route('comic.index') }}" class="fw-bolder text-decoration-none">Contenuto</a></h1>
     </div>
 </div>
 

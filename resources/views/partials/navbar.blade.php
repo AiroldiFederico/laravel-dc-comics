@@ -25,7 +25,7 @@ $sections = [
         <ul class="ulnav">
             @foreach ($sections as $section)
                 <li class="{{ $section['active'] ? 'active' : '' }}">
-                    <a href="#">{{ $section['name'] }}</a>
+                    <a href="{{ route('comic.index') }}">{{ $section['name'] }}</a>
                 </li>
             @endforeach
         </ul>
