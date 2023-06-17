@@ -23,5 +23,10 @@
 
     <!-- includiamo il footer per tutte le pagine -->
     @include( 'partials.footer' )
+
+    {{-- Script JS --}}
+    <script>
+        @yield('script')
+    </script>
 </body>
 </html>

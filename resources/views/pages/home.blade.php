@@ -45,7 +45,7 @@
                         @csrf
                         @method('DELETE')
 
-                        <button class="btn btn-danger col-12" role="button">Delete</button>
+                        <button class="btn btn-danger col-12" role="button" onclick="return deleteConfirm()">Delete</button>
                     </form>
                 </div>
 
@@ -58,5 +58,12 @@
 </div>
 
 
+@endsection
 
+@section('script')
+    
+    function deleteConfirm() {
+        return confirm('Sei sicuro di eliminare questo comic?');
+    };
+    
 @endsection
