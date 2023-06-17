@@ -14,10 +14,22 @@
 
 
 <div class="maincore">
+
     <div id="jumbotron">
         <p>Crea il Comic</p>
     </div>
+
+    @if ($errors->any())
+      <div class="alert alert-danger">
+          <ul>
+              @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+              @endforeach
+          </ul>
+      </div>
+    @endif
     <div class="col-12 m-auto">
+
         <div id="slide" class="justify-content-center" >
 
             <form action=" {{ route( 'comic.store' ) }} " method="POST" class="col-3 vh-100">

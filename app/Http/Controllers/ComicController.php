@@ -44,6 +44,16 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'thumb' => 'required',
+            'price' => 'required',
+            'series' => 'required',
+            'sale_date' => 'required',
+            'type' => 'required'
+        ]);
+
 
         $form_data = $request->all();
 
@@ -72,12 +82,9 @@ class ComicController extends Controller
      */
     public function show($id)
     {
-        
         $comic = Comic::findOrFail($id);
 
-
         return view('pages.show', compact('comic'));
-
     }
 
 
@@ -107,6 +114,7 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+
         $form_data = $request->all();
         $comic->update($form_data);
 
